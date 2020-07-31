@@ -107,7 +107,7 @@ spec:
         command:
         - cp
         args:
-        - -f
+        --f
         - /etc/kube-flannel/cni-conf.json
         - /etc/cni/net.d/10-flannel.conflist
         volumeMounts:
@@ -121,8 +121,8 @@ spec:
         command:
         - /opt/bin/flanneld
         args:
-        - --ip-masq
-        - --kube-subnet-mgr
+        ---ip-masq
+        ---kube-subnet-mgr
         resources:
           requests:
             cpu: "100m"
